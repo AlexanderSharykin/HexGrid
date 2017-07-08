@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexGridControl", "HexGridControl\HexGridControl.csproj", "{942134AC-6EA2-4500-8F22-0F739B70A05F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexGridDemo", "HexGridDemo\HexGridDemo.csproj", "{B04561D8-B734-4956-8779-3AA6A1479B34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexGridHelpers", "HexGridHelpers\HexGridHelpers.csproj", "{E91ECA7C-4DEB-4A44-B695-FC5B9498A677}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{942134AC-6EA2-4500-8F22-0F739B70A05F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{942134AC-6EA2-4500-8F22-0F739B70A05F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{942134AC-6EA2-4500-8F22-0F739B70A05F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{942134AC-6EA2-4500-8F22-0F739B70A05F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B04561D8-B734-4956-8779-3AA6A1479B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04561D8-B734-4956-8779-3AA6A1479B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04561D8-B734-4956-8779-3AA6A1479B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04561D8-B734-4956-8779-3AA6A1479B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E91ECA7C-4DEB-4A44-B695-FC5B9498A677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E91ECA7C-4DEB-4A44-B695-FC5B9498A677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E91ECA7C-4DEB-4A44-B695-FC5B9498A677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E91ECA7C-4DEB-4A44-B695-FC5B9498A677}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
