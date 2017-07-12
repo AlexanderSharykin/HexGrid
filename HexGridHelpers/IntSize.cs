@@ -1,6 +1,8 @@
-﻿namespace HexGridHelpers
+﻿using System;
+
+namespace HexGridHelpers
 {
-    public struct IntSize
+    public struct IntSize: IEquatable<IntSize>
     {
         private readonly int _width;
         private readonly int _height;
@@ -31,11 +33,9 @@
             return !(a == b);
         }
 
-        public override bool Equals(object o)
+        public bool Equals(IntSize other)
         {
-            if (o is IntSize)
-                return this == (IntSize)o;
-            return false;
+            return this == other;
         }
     }
 }

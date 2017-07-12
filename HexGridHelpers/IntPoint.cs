@@ -1,6 +1,8 @@
-﻿namespace HexGridHelpers
+﻿using System;
+
+namespace HexGridHelpers
 {
-    public struct IntPoint
+    public struct IntPoint: IEquatable<IntPoint>
     {
         private readonly int _x;
         private readonly int _y;
@@ -31,11 +33,9 @@
             return !(a == b);
         }
 
-        public override bool Equals(object o)
+        public bool Equals(IntPoint other)
         {
-            if (o is IntPoint)
-                return this == (IntPoint)o;
-            return false;
+            return this == other;
         }
     }
 }

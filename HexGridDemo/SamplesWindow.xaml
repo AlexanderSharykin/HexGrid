@@ -80,9 +80,8 @@
             <TabItem.Resources>
                 <Style TargetType="{x:Type hx:HexItem}">
                     <Setter Property="BorderThickness" Value="1.5"/>
-                    <Setter Property="Padding" Value="20"/>
-                    <Setter Property="FontSize" Value="28"/>
-                    <Setter Property="Background" Value="Wheat"/>
+                    <Setter Property="Padding" Value="20"/>                    
+                    <Setter Property="Background" Value="White"/>
                     <Setter Property="BorderBrush" Value="Black"/>
                 </Style>
             </TabItem.Resources>
@@ -108,11 +107,13 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
 
                     <Grid.Style>
@@ -129,45 +130,47 @@
                         </Style>
                     </Grid.Style>
 
-                    <Border Background="LightGray" 
+                    <Border Background="Gainsboro" 
                             Visibility="{Binding Path=Visibility, ElementName=HxFirst}"
                             Grid.Column="0" Grid.Row="0"
-                            Grid.ColumnSpan="1" Grid.RowSpan="5"/>
+                            Grid.ColumnSpan="1" Grid.RowSpan="7"/>
 
-                    <TextBlock Text="(W, H)" Grid.Row="4" Grid.Column="0" 
-                               Visibility="{Binding Path=Visibility, ElementName=HxFirst}"
-                               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBlock Text="(W, 2*H)" Grid.Row="3" Grid.Column="0"
+                    <TextBlock Text="(W, H)" Grid.Row="6" Grid.Column="0" 
                                Visibility="{Binding Path=Visibility, ElementName=HxFirst}"
                                VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-                    <Border Background="LightGray" 
+                    <Border Background="Gainsboro" 
                             Visibility="{Binding Path=Visibility, ElementName=HxLast}"
                             Grid.Column="4" Grid.Row="0"
-                            Grid.ColumnSpan="1" Grid.RowSpan="5"/>
+                            Grid.ColumnSpan="1" Grid.RowSpan="7"/>
 
                     <TextBlock Text="(W, H)" Grid.Column="4" 
                                Visibility="{Binding Path=Visibility, ElementName=HxLast}"
-                                VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBlock Text="(W, 2*H)" Grid.Row="1" Grid.Column="4"
-                               Visibility="{Binding Path=Visibility, ElementName=HxLast}"
                                VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
 
-                    <hx:HexGrid Grid.ColumnSpan="5" Grid.RowSpan="5"
+                    <hx:HexGrid Grid.ColumnSpan="5" Grid.RowSpan="7"
                                 RowCount="2" ColumnCount="2" Orientation="Vertical">
 
-                        <hx:HexItem Name="HxFirst" Grid.Row="0" Grid.Column="0" 
-                                    Content="First" HorizontalContentAlignment="Left"
-                                    Visibility="{Binding Path=IsChecked, ElementName=ChkFirstColumn, Converter={StaticResource Btw}}"/>
-                        
-                        <hx:HexItem Background="SaddleBrown" Grid.Row="0" Grid.Column="1" />
+                        <hx:HexItem Name="HxFirst" Grid.Row="0" Grid.Column="0"
+                                    HorizontalContentAlignment="Left"
+                                    Visibility="{Binding Path=IsChecked, ElementName=ChkFirstColumn, Converter={StaticResource Btw}}">
+                            <hx:HexItem.Content>
+                                <TextBlock Background="Wheat" Text="First" FontSize="28"/>
+                            </hx:HexItem.Content>
+                        </hx:HexItem>
 
-                        <hx:HexItem Background="SaddleBrown" Grid.Row="1" Grid.Column="0" />
+                        <hx:HexItem Background="Wheat" Grid.Row="0" Grid.Column="1" />
+
+                        <hx:HexItem Background="Wheat" Grid.Row="1" Grid.Column="0" />
                         
-                        <hx:HexItem Name="HxLast" Grid.Row="1" Grid.Column="1" 
-                                    Content="Last" HorizontalContentAlignment="Right"
-                                    Visibility="{Binding Path=IsChecked, ElementName=ChkLastColumn, Converter={StaticResource Btw}}"/>
+                        <hx:HexItem Name="HxLast" Grid.Row="1" Grid.Column="1"
+                                    HorizontalContentAlignment="Right"                                    
+                                    Visibility="{Binding Path=IsChecked, ElementName=ChkLastColumn, Converter={StaticResource Btw}}">
+                            <hx:HexItem.Content>
+                                <TextBlock Background="Wheat" Text="Last" FontSize="28"/>
+                            </hx:HexItem.Content>
+                        </hx:HexItem>
                     </hx:HexGrid>
                 </Grid>
 
@@ -180,7 +183,7 @@
                     <Setter Property="BorderThickness" Value="1.5"/>
                     <Setter Property="Padding" Value="20"/>
                     <Setter Property="FontSize" Value="28"/>
-                    <Setter Property="Background" Value="Wheat"/>
+                    <Setter Property="Background" Value="White"/>
                     <Setter Property="BorderBrush" Value="Black"/>
                 </Style>
             </TabItem.Resources>
@@ -199,9 +202,11 @@
                 <Grid Grid.Row="1" Grid.Column="1" Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width="2*"/>
                         <ColumnDefinition/>
-                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>                        
+                        <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
@@ -227,45 +232,47 @@
                         </Style>
                     </Grid.Style>
 
-                    <Border Background="LightGray" 
+                    <Border Background="Gainsboro" 
                             Visibility="{Binding Path=Visibility, ElementName=TileFirst}"
                             Grid.Column="0" Grid.Row="0"
-                            Grid.ColumnSpan="5" Grid.RowSpan="1"/>
+                            Grid.ColumnSpan="7" Grid.RowSpan="1"/>
 
-                    <TextBlock Text="(W, H)" Grid.Row="0" Grid.Column="4" 
-                               Visibility="{Binding Path=Visibility, ElementName=TileFirst}"
-                               VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBlock Text="(2*W, H)" Grid.Row="0" Grid.Column="3"
+                    <TextBlock Text="(W, H)" Grid.Row="0" Grid.Column="6" 
                                Visibility="{Binding Path=Visibility, ElementName=TileFirst}"
                                VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-                    <Border Background="LightGray" 
+                    <Border Background="Gainsboro" 
                             Visibility="{Binding Path=Visibility, ElementName=TileLast}"
                             Grid.Column="0" Grid.Row="4"
-                            Grid.ColumnSpan="5" Grid.RowSpan="1"/>
+                            Grid.ColumnSpan="7" Grid.RowSpan="1"/>
 
                     <TextBlock Text="(W, H)" Grid.Row="4" Grid.Column="0" 
                                Visibility="{Binding Path=Visibility, ElementName=TileLast}"
                                 VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    <TextBlock Text="(2*W, H)" Grid.Row="4" Grid.Column="1"
-                               Visibility="{Binding Path=Visibility, ElementName=TileLast}"
-                               VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
 
-                    <hx:HexGrid Grid.ColumnSpan="5" Grid.RowSpan="5"
+                    <hx:HexGrid Grid.ColumnSpan="7" Grid.RowSpan="5"
                                 RowCount="2" ColumnCount="2" Orientation="Horizontal">
 
-                        <hx:HexItem Name="TileFirst" Grid.Row="0" Grid.Column="0" 
-                                    Content="First" VerticalContentAlignment="Top"
-                                    Visibility="{Binding Path=IsChecked, ElementName=ChkFirstRow, Converter={StaticResource Btw}}"/>
+                        <hx:HexItem Name="TileFirst" Grid.Row="0" Grid.Column="0"
+                                    VerticalContentAlignment="Top"
+                                    Visibility="{Binding Path=IsChecked, ElementName=ChkFirstRow, Converter={StaticResource Btw}}">
+                            <hx:HexItem.Content>
+                                <TextBlock Background="Wheat" Text="First" FontSize="28"/>
+                            </hx:HexItem.Content>
+                        </hx:HexItem>
 
-                        <hx:HexItem Background="SaddleBrown" Grid.Row="0" Grid.Column="1" />
+                        <hx:HexItem Background="Wheat" Grid.Row="0" Grid.Column="1" />
 
-                        <hx:HexItem Background="SaddleBrown" Grid.Row="1" Grid.Column="0" />
+                        <hx:HexItem Background="Wheat" Grid.Row="1" Grid.Column="0" />
 
-                        <hx:HexItem Name="TileLast" Grid.Row="1" Grid.Column="1" 
-                                    Content="Last" VerticalContentAlignment="Bottom"
-                                    Visibility="{Binding Path=IsChecked, ElementName=ChkLastRow, Converter={StaticResource Btw}}"/>
+                        <hx:HexItem Name="TileLast" Grid.Row="1" Grid.Column="1"
+                                    VerticalContentAlignment="Bottom"
+                                    Visibility="{Binding Path=IsChecked, ElementName=ChkLastRow, Converter={StaticResource Btw}}">
+                            <hx:HexItem.Content>
+                                <TextBlock Background="Wheat" Text="Last" FontSize="28"/>
+                            </hx:HexItem.Content>
+                        </hx:HexItem>
                     </hx:HexGrid>
                 </Grid>
             </Grid>
